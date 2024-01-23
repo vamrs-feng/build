@@ -10,3 +10,8 @@ jobs:
           armbian_release:   "jammy"                        # userspace
           armbian_target:    "build"                        # build=image, kernel=kernel
           armbian_board:     "rock-5b"                   # build target
+          armbian_kernel_branch:  "legacy"
+          armbian_ui:         "gnome"
+          armbian_compress:   "xz"
+
+
