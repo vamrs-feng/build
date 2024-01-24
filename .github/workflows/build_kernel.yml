@@ -1,0 +1,18 @@
+name: "Build Armbian"
+on:
+  workflow_dispatch:
+jobs:
+  build-armbian:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: vamrs-feng/build@main
+        with:
+          armbian_token:     "${{ secrets.GITHUB_TOKEN }}"  # GitHub token
+          armbian_release:   "jammy"                        # userspace
+          armbian_target:    "kernel"                        # build=image, kernel=kernel
+          armbian_board:     "rock-5b"                   # build target
+          armbian_kernel_branch:  "legacy"
+          armbian_ui:         "gnome"
+          armbian_compress:   "xz"
+
+
